@@ -1,15 +1,70 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jun 17 12:43:29 2022
+
+@author: Admin
+"""
+
+# from google_trans_new import google_translator # pip install google_trans_new==1.1.9
+# import streamlit as st # pip install streamlit==0.82.0
+# import gtts # pip install gtts
+
+
+# st.set_page_config(page_title='Simply! Translate', page_icon='translator-icon.png', layout='wide', initial_sidebar_state='expanded')
+
+
+# Languages = {'afrikaans':'af','albanian':'sq','amharic':'am','arabic':'ar','armenian':'hy','azerbaijani':'az','basque':'eu','belarusian':'be','bengali':'bn','bosnian':'bs','bulgarian':'bg','catalan':'ca','cebuano':'ceb','chichewa':'ny','chinese (simplified)':'zh-cn','chinese (traditional)':'zh-tw','corsican':'co','croatian':'hr','czech':'cs','danish':'da','dutch':'nl','english':'en','esperanto':'eo','estonian':'et','filipino':'tl','finnish':'fi','french':'fr','frisian':'fy','galician':'gl','georgian':'ka','german':'de','greek':'el','gujarati':'gu','haitian creole':'ht','hausa':'ha','hawaiian':'haw','hebrew':'iw','hebrew':'he','hindi':'hi','hmong':'hmn','hungarian':'hu','icelandic':'is','igbo':'ig','indonesian':'id','irish':'ga','italian':'it','japanese':'ja','javanese':'jw','kannada':'kn','kazakh':'kk','khmer':'km','korean':'ko','kurdish (kurmanji)':'ku','kyrgyz':'ky','lao':'lo','latin':'la','latvian':'lv','lithuanian':'lt','luxembourgish':'lb','macedonian':'mk','malagasy':'mg','malay':'ms','malayalam':'ml','maltese':'mt','maori':'mi','marathi':'mr','mongolian':'mn','myanmar (burmese)':'my','nepali':'ne','norwegian':'no','odia':'or','pashto':'ps','persian':'fa','polish':'pl','portuguese':'pt','punjabi':'pa','romanian':'ro','russian':'ru','samoan':'sm','scots gaelic':'gd','serbian':'sr','sesotho':'st','shona':'sn','sindhi':'sd','sinhala':'si','slovak':'sk','slovenian':'sl','somali':'so','spanish':'es','sundanese':'su','swahili':'sw','swedish':'sv','tajik':'tg','tamil':'ta','telugu':'te','thai':'th','turkish':'tr','turkmen':'tk','ukrainian':'uk','urdu':'ur','uyghur':'ug','uzbek':'uz','vietnamese':'vi','welsh':'cy','xhosa':'xh','yiddish':'yi','yoruba':'yo','zulu':'zu'}
+
+
+# translator = google_translator()
+# st.title("Language Translator:balloon:")
+# # st.write('''
+# # [![Star](https://img.shields.io/github/stars/HarisankarSNair/LanguageTranslator.svg?logo=github&style=social)](https://gitHub.com/HarisankarSNair/LanguageTranslator)
+# # &nbsp [![Streamlit](https://img.shields.io/badge/Made%20with%20-Streamlit-red)](https://streamlit.io/)
+# # ''')
+
+# text = st.text_area("Enter text:",height=None,max_chars=None,key=None,help="Enter your text here")
+
+# option1 = st.selectbox('Input language',
+#                       ('english', 'afrikaans', 'albanian', 'amharic', 'arabic', 'armenian', 'azerbaijani', 'basque', 'belarusian', 'bengali', 'bosnian', 'bulgarian', 'catalan', 'cebuano', 'chichewa', 'chinese (simplified)', 'chinese (traditional)', 'corsican', 'croatian', 'czech', 'danish', 'dutch',  'esperanto', 'estonian', 'filipino', 'finnish', 'french', 'frisian', 'galician', 'georgian', 'german', 'greek', 'gujarati', 'haitian creole', 'hausa', 'hawaiian', 'hebrew', 'hindi', 'hmong', 'hungarian', 'icelandic', 'igbo', 'indonesian', 'irish', 'italian', 'japanese', 'javanese', 'kannada', 'kazakh', 'khmer', 'korean', 'kurdish (kurmanji)', 'kyrgyz', 'lao', 'latin', 'latvian', 'lithuanian', 'luxembourgish', 'macedonian', 'malagasy', 'malay', 'malayalam', 'maltese', 'maori', 'marathi', 'mongolian', 'myanmar (burmese)', 'nepali', 'norwegian', 'odia', 'pashto', 'persian', 'polish', 'portuguese', 'punjabi', 'romanian', 'russian', 'samoan', 'scots gaelic', 'serbian', 'sesotho', 'shona', 'sindhi', 'sinhala', 'slovak', 'slovenian', 'somali', 'spanish', 'sundanese', 'swahili', 'swedish', 'tajik', 'tamil', 'telugu', 'thai', 'turkish', 'turkmen', 'ukrainian', 'urdu', 'uyghur', 'uzbek', 'vietnamese', 'welsh', 'xhosa', 'yiddish', 'yoruba', 'zulu'))
+
+# option2 = st.selectbox('Output language',
+#                        ('malayalam', 'afrikaans', 'albanian', 'amharic', 'arabic', 'armenian', 'azerbaijani', 'basque', 'belarusian', 'bengali', 'bosnian', 'bulgarian', 'catalan', 'cebuano', 'chichewa', 'chinese (simplified)', 'chinese (traditional)', 'corsican', 'croatian', 'czech', 'danish', 'dutch', 'english', 'esperanto', 'estonian', 'filipino', 'finnish', 'french', 'frisian', 'galician', 'georgian', 'german', 'greek', 'gujarati', 'haitian creole', 'hausa', 'hawaiian', 'hebrew', 'hindi', 'hmong', 'hungarian', 'icelandic', 'igbo', 'indonesian', 'irish', 'italian', 'japanese', 'javanese', 'kannada', 'kazakh', 'khmer', 'korean', 'kurdish (kurmanji)', 'kyrgyz', 'lao', 'latin', 'latvian', 'lithuanian', 'luxembourgish', 'macedonian', 'malagasy', 'malay', 'maltese', 'maori', 'marathi', 'mongolian', 'myanmar (burmese)', 'nepali', 'norwegian', 'odia', 'pashto', 'persian', 'polish', 'portuguese', 'punjabi', 'romanian', 'russian', 'samoan', 'scots gaelic', 'serbian', 'sesotho', 'shona', 'sindhi', 'sinhala', 'slovak', 'slovenian', 'somali', 'spanish', 'sundanese', 'swahili', 'swedish', 'tajik', 'tamil', 'telugu', 'thai', 'turkish', 'turkmen', 'ukrainian', 'urdu', 'uyghur', 'uzbek', 'vietnamese', 'welsh', 'xhosa', 'yiddish', 'yoruba', 'zulu'))
+
+# value1 = Languages[option1]
+# value2 = Languages[option2]
+
+# if st.button('Translate Sentence'):
+#     if text == "":
+#         st.warning('Please **enter text** for translation')
+
+#     else:
+#         translate = translator.translate(text, lang_tgt=value2)  # lang_src=value1, 
+#         #translate = translator.translate()
+
+#         converted_audio = gtts.gTTS(translate, lang=value2)
+#         converted_audio.save("translated.mp3")
+#         audio_file = open('translated.mp3','rb')
+#         audio_bytes = audio_file.read()
+#         st.audio(audio_bytes, format='audio')
+#         st.write("To **download the audio file**, click the kebab menu on the audio bar.")
+#         st.success("Translation is **successfully** completed!")
+#         st.balloons()
+# # else:
+# #     pass
+
+
 # Import necessary libraries
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
-nltk.download('omw-1.4')
-import argparse
+#nltk.download('omw-1.4')
 import string
 import nltk.corpus
 from nltk.util import ngrams
 import joblib
-# import gensim
+import gensim
 import re
 import streamlit as st
 import numpy as np
@@ -21,26 +76,26 @@ import tempfile
 from io import StringIO
 from PIL import  Image
 import pytesseract
-#from pytesseract import*
-#import cv2
 import spacy
-import spacy.cli
-spacy.cli.download("en_core_web_sm")
 import spacy_streamlit
-#import en_core_web_sm
 from collections import Counter
 from nltk.tokenize import sent_tokenize
 import docx2txt
 import pdfplumber
 import requests
 from bs4 import BeautifulSoup
+import argparse
 
 #1. Translator Imports
-from mtranslate import translate
+#from mtranslate import translate
 import os
 from gtts import gTTS
 import base64
 import datetime as dt
+import googletrans
+from googletrans import Translator
+from langdetect import detect
+import speech_recognition as sr
 
 #2. Youtube Transcript Extractor
 from youtube_transcript_api import YouTubeTranscriptApi
@@ -57,16 +112,15 @@ import Text_Summarisation as ts
 from annotated_text import annotated_text
 # https://pypi.org/project/spacy/
 
-# import sys
-# sys.argv=['']
-# del sys
+args =  argparse.ArgumentParser()
+
 
 # Sidebar options
 option = st.sidebar.selectbox('Navigation', 
 ["Overview",
  "Multilingual Text to Speech Translator",
- "Text Summarization",
- "Text Annotation"])
+  "Text Summarization",
+  "Text Annotation"])
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
@@ -130,10 +184,11 @@ elif option == 'Multilingual Text to Speech Translator':
     
         
     inputtext =""
-    options = st.sidebar.radio("Please choose one option",('Type or Write', 'Youtube URL')) #'Speech to Text' #, 'Image'
+    options = st.sidebar.radio("Please choose one option",('Type or Write', 'Youtube URL', 'Image')) 
     
     if options == 'Type or Write':
         inputtext = st.text_area("INPUT",height=200)
+        st.button("Submit")
 
         docx_file = st.file_uploader("OR Choose a file", type=["pdf","docx","txt"])
         if docx_file is not None:
@@ -187,33 +242,45 @@ elif option == 'Multilingual Text to Speech Translator':
                 st.error("Transcript Not available for this video")
         
         
-    # if options == "Image":
+    if options == "Image":
         
-    #     def load_image(image_file):
-    #         img = Image.open(image_file)
-    #         return img    
+        def load_image(image_file):
+            img = Image.open(image_file)
+            return img    
         
-    #     image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
-    #     ap = argparse.ArgumentParser(description='Fooo')
-    #     args = ap.parse_args()
-    #     ap.add_argument("-l", "--lang", required=True,help="language that Tesseract will use when OCR'ing")
-    #     ap.add_argument("-t", "--to", type=str, default="en",help="language that we'll be translating to")
-    #     ap.add_argument("-p", "--psm", type=int, default=13,help="Tesseract PSM mode")
-    #     args = vars(ap.parse_args())
+        image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
    
-    #     if image_file is not None:
-    #           # To View Uploaded Image
-    #           st.image(load_image(image_file),width=250)
-    #           image = cv2.imread(args["image"])
-    #           rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)	
-    #           #tessdata_dir_config = r'--tessdata-dir "/app/.apt/usr/share/tesseract-ocr/tessdata"'
-    #           pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
-    #           #pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Sandesh Singh\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
-    #           options = "-l {} --psm {}".format(args["lang"], args["psm"]) # Image.open(image_file)
-    #           inputtext = pytesseract.image_to_string(rgb,lang='eng+hin+mar+pan+guj+ind+kor+urd+tam+telfra+ara+asm+jpn+kan', config=options) # eng+hin+mar+pan+guj+ind+kor+urd+tam+telfra+ara+asm+jpn+kan
-    #           if st.button("Display Extracted Text"):
-    #               st.text(inputtext[:-1]) 
+        if image_file is not None:
+              # To View Uploaded Image
+              st.image(load_image(image_file),width=250)
+              #pytesseract.pytesseract.tesseract_cmd = r'.\.apt\usr\bin\tesseract'
+              pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Sandesh Singh\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+              #options = "-l {} --psm {}".format(args["lang"], args["psm"])
+              inputtext = pytesseract.image_to_string(Image.open(image_file),lang='eng+hin+mar+pan+guj+ind+kor+urd+tam+telfra+ara+asm+jpn+kan') # eng+hin+mar+pan+guj+ind+kor+urd+tam+telfra+ara+asm+jpn+kan
+              if st.button("Display Extracted Text"):
+                  st.text(inputtext[:-1])
+               
 
+            
+    if st.button("Detect Input Language And Play Audio File"):                  
+            lang_detect = detect(inputtext) 
+            st.write("Language of Input Text is :", lang_detect)
+            # Passing the text and language to the engine, 
+            # here we have marked slow=False. Which tells 
+            # the module that the converted audio should 
+            # have a high speed
+            input_audio = gTTS(text=inputtext, lang=lang_detect, slow=False)
+            # Saving the converted audio in a mp3 file named
+            # welcome 
+            input_audio.save("input_audio.mp3")
+            # Playing the converted file
+            #os.system("mpg321 input_audio.mp3")
+            input_audio_read = open('input_audio.mp3', 'rb')
+            input_audio_bytes = input_audio_read.read()
+            bin_str = base64.b64encode(input_audio_bytes).decode()
+            st.audio(input_audio_bytes, format='audio/mp3')
+ 
+    
     option = st.selectbox('Select Language',langlist)
     st.sidebar.write("1. Languages are pulled from language.xlsx. If translation is available it will be displayed in Translated Text window.")
     st.sidebar.write("2. In addition if text-to-Speech is supported it will display audio file to play and download." )
@@ -294,6 +361,9 @@ elif option == 'Multilingual Text to Speech Translator':
         "zh-CN": "Chinese"
     }
     
+    
+
+    
     # function to decode audio file for download
     def get_binary_file_downloader_html(bin_file, file_label='File'):
         with open(bin_file, 'rb') as f:
@@ -309,7 +379,13 @@ elif option == 'Multilingual Text to Speech Translator':
         # I/O
         if len(inputtext) > 0 :
             try:
-                output = translate(inputtext,lang_array[option])
+                translator=Translator()
+                output = translator.translate(inputtext, dest=lang_array[option]).text
+                # if option in speech_langs.values():
+                #     output = translator.translate(inputtext,dest=lang_array[option])
+                # for key, value in speech_langs.items():
+                #     output = translator.translate(inputtext, dest=value).text
+                #output = translate(inputtext,lang_array[option])
                 with c1:
                     st.text_area("TRANSLATED TEXT",output,height=200)
                 # if speech support is available will render autio file
@@ -327,6 +403,7 @@ elif option == 'Multilingual Text to Speech Translator':
 
 
 #*****************************************************************************************
+
 
 #3. Text Summarizer
 
@@ -346,7 +423,7 @@ if option == 'Text Summarization':
     
     
     strAllTexts =""
-    options = st.sidebar.radio("Please choose one option",('Upload File', 'Web Scrapping','Type or Write'))
+    options = st.sidebar.radio("Please choose one option",('Upload File', 'Web Scrapping','Type or Write', 'Youtube URL'))
     if options == 'Upload File':
         docx_file = st.sidebar.file_uploader("Choose a file", type=["pdf","docx","txt"])
         if docx_file is not None:
@@ -386,6 +463,34 @@ if option == 'Text Summarization':
                     strAllTexts = strAllTexts + "\n"  + str(lines.text)
             except:
                 st.write("Please enter valid URL")
+                
+    if options == "Youtube URL":
+        st.write("YouTube Transcript Extractor")
+        URL = st.sidebar.text_input("Paste YouTube URL:","https://www.youtube.com/watch?v=Y8Tko2YC5hA")    #https://www.youtube.com/watch?v=ukzFI9rgwfU
+        
+        if "=" in URL:
+            ID = URL.split("=")[1]
+            embedurl = "https://www.youtube.com/embed/" + ID
+            if "&" in embedurl: embedurl = embedurl.split("&")[0]
+        try:
+            components.iframe(embedurl, width=500, height=250)
+        except:
+            st.error("YouTube URL Required")
+        
+        try:
+            transcript = YouTubeTranscriptApi.get_transcript(ID)
+            l = [t['text'] for t in transcript]
+            description = " ".join(l)
+        except:
+            pass
+        
+        try :
+            if len(description) > 0:
+                strAllTexts = st.text_area("Extracted Transcript",description,height=200)
+                st.download_button(label="Download Transcript",data=description,file_name=str(ID) + ".txt",mime="text/plain")
+        except Exception as e:
+                st.error("Transcript Not available for this video")            
+
 
     if len(strAllTexts):
         genre = st.sidebar.radio("Please choose one option",('View File Content', 'EDA / VDA', 'Summary'))
@@ -751,13 +856,13 @@ if option == 'Text Summarization':
                     st.write(str(i).strip())
                     
             text = strAllTexts       
-            # if model == "GenSim":
-            #    	sentence_count = len(sent_tokenize(text))
-            #    	st.write("Number of sentences:", sentence_count)
-            #    	ratio = st.sidebar.slider("Select summary ratio", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
-            #     out = ts.text_sum_gensim(text, ratio=ratio)
-            #     st.write("**Summary Output:**", out)
-            #     st.write("Number of output sentences:", len(sent_tokenize(out)))
+            if model == "GenSim":
+               	sentence_count = len(sent_tokenize(text))
+               	st.write("Number of sentences:", sentence_count)
+               	ratio = st.sidebar.slider("Select summary ratio", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
+                out = ts.text_sum_gensim(text, ratio=ratio)
+                st.write("**Summary Output:**", out)
+                st.write("Number of output sentences:", len(sent_tokenize(out)))
              			# st.write(out)
             if model == "TextRank":
                 sentence_count = len(sent_tokenize(text))
@@ -783,19 +888,65 @@ if option == "Text Annotation":
     st.write("Text annotation in machine learning (ML) is the process of assigning labels to a digital file or document and its content. This is an NLP method where different types of sentence structures are highlighted by various criteria.")
     st.image("./images/Text Annotation.gif")
     
+    text_input = ""
 	#st.header("Enter the text")
+    options = st.sidebar.radio("Please choose one option",('Type/Enter the sentence', 'Upload File', 'Web Scrapping','Youtube URL'))
     
-    st.markdown("**Example Random Sentence:** Barack Hussein Obama II (born August 4, 1961) is an American attorney and politician who served as the 44th President of United States from January 20, 2009 to January 20, 2017. A member of the Democratic Party, he was the first African American to serve as president. He was previously a United States Senator from lllinois and a member of the lllinois State Senate.")
+    if options == "Type/Enter the sentence":
     
-    text_input = st.text_area("Type/Enter the sentence")
+        st.markdown("**Example Random Sentence:** Barack Hussein Obama II (born August 4, 1961) is an American attorney and politician who served as the 44th President of United States from January 20, 2009 to January 20, 2017. A member of the Democratic Party, he was the first African American to serve as president. He was previously a United States Senator from lllinois and a member of the lllinois State Senate.")
+        
+        text_input = st.text_area("Type/Enter the sentence")
     
+    
+    if options == "Upload File":
+    
+        uploaded_file = st.file_uploader("or Upload a file", type=["doc", "docx", "pdf", "txt"])
+        if uploaded_file is not None:
+            text_input = uploaded_file.getvalue()
+        
+    if options == 'Web Scrapping':
+            linkURL = st.text_input(label="Please enter URL of website", max_chars=100, help="From the entered URL we will fetch all the content which will be present inside <p> tag only")
+            try:
+                r=requests.get(linkURL)
+                bs= BeautifulSoup(r.text,'html.parser')
 
-    uploaded_file = st.file_uploader("or Upload a file", type=["doc", "docx", "pdf", "txt"])
-    if uploaded_file is not None:
-        text_input = uploaded_file.getvalue()
+                p=bs.find_all('p')
+            
+                for lines in p:
+                    text_input = text_input + "\n"  + str(lines.text)
+            except:
+                st.write("Please enter valid URL")
+                
+    if options == "Youtube URL":
+        st.write("YouTube Transcript Extractor")
+        URL = st.sidebar.text_input("Paste YouTube URL:","https://www.youtube.com/watch?v=Y8Tko2YC5hA")    #https://www.youtube.com/watch?v=ukzFI9rgwfU
+        
+        if "=" in URL:
+            ID = URL.split("=")[1]
+            embedurl = "https://www.youtube.com/embed/" + ID
+            if "&" in embedurl: embedurl = embedurl.split("&")[0]
+        try:
+            components.iframe(embedurl, width=500, height=250)
+        except:
+            st.error("YouTube URL Required")
+        
+        try:
+            transcript = YouTubeTranscriptApi.get_transcript(ID)
+            l = [t['text'] for t in transcript]
+            description = " ".join(l)
+        except:
+            pass
+        
+        try :
+            if len(description) > 0:
+                text_input = st.text_area("Extracted Transcript",description,height=200)
+                st.download_button(label="Download Transcript",data=description,file_name=str(ID) + ".txt",mime="text/plain")
+        except Exception as e:
+                st.error("Transcript Not available for this video")   
     
-    #nlp = spacy.load('en_core_web_sm')
-    ner = spacy.load('en_core_web_sm')
+    nlp = spacy.load("en_core_web_sm")
+    ner = spacy.load("en_core_web_sm")
     doc = ner(str(text_input))
     
     options = st.sidebar.radio("Please choose one option",('NER', 'Tokenization'))
@@ -809,5 +960,26 @@ if option == "Text Annotation":
 
 
 #*****************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
