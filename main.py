@@ -95,7 +95,7 @@ import datetime as dt
 import googletrans
 from googletrans import Translator
 from langdetect import detect
-import speech_recognition as sr
+#import speech_recognition as sr
 
 #2. Youtube Transcript Extractor
 from youtube_transcript_api import YouTubeTranscriptApi
