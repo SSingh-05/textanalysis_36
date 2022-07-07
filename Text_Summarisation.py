@@ -1,5 +1,5 @@
 # Import necessary libraries
-from gensim.summarization.summarizer import summarize
+from gensim.summarization import summarize
 from nltk.tokenize import sent_tokenize
 import math
 from sumy.parsers.plaintext import PlaintextParser
