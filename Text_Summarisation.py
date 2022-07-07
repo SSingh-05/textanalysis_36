@@ -1,5 +1,7 @@
 # Import necessary libraries
-from gensim.summarization import summarize
+!pip install gensim==3.8.3
+import gensim
+from gensim.summarization.summarize import summarize
 from nltk.tokenize import sent_tokenize
 import math
 from sumy.parsers.plaintext import PlaintextParser
