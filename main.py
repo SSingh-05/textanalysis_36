@@ -40,13 +40,13 @@ from bs4 import BeautifulSoup
 import argparse
 
 #1. Translator Imports
-#from mtranslate import translate
+from mtranslate import translate
 import os
 from gtts import gTTS
 import base64
 import datetime as dt
 import googletrans
-from googletrans import Translator
+# from googletrans import Translator
 from langdetect import detect
 #import speech_recognition as sr
 
@@ -333,13 +333,9 @@ elif option == 'Multilingual Text to Speech Translator':
         # I/O
         if len(inputtext) > 0 :
             try:
-                translator=Translator()
-                output = translator.translate(inputtext, dest=lang_array[option]).text
-                # if option in speech_langs.values():
-                #     output = translator.translate(inputtext,dest=lang_array[option])
-                # for key, value in speech_langs.items():
-                #     output = translator.translate(inputtext, dest=value).text
-                #output = translate(inputtext,lang_array[option])
+                #translator=Translator()
+                #output = translator.translate(inputtext, dest=lang_array[option]).text
+                output = translate(inputtext,lang_array[option])
                 with c1:
                     st.text_area("TRANSLATED TEXT",output,height=200)
                 # if speech support is available will render autio file
