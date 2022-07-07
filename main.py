@@ -6,6 +6,7 @@ Created on Fri Jun 17 12:43:29 2022
 """
 
 # Import necessary libraries
+!pip install gensim==3.8.3
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
