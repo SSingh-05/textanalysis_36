@@ -6,7 +6,6 @@ Created on Fri Jun 17 12:43:29 2022
 """
 
 # Import necessary libraries
-!pip install gensim==3.8.3
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -16,7 +15,7 @@ import string
 import nltk.corpus
 from nltk.util import ngrams
 import joblib
-import gensim
+# import gensim
 import re
 import streamlit as st
 import numpy as np
@@ -811,13 +810,13 @@ if option == 'Text Summarization':
                     st.write(str(i).strip())
                     
             text = strAllTexts       
-            if model == "GenSim":
-               	sentence_count = len(sent_tokenize(text))
-               	st.write("Number of sentences:", sentence_count)
-               	ratio = st.sidebar.slider("Select summary ratio", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
-                out = ts.text_sum_gensim(text, ratio=ratio)
-                st.write("**Summary Output:**", out)
-                st.write("Number of output sentences:", len(sent_tokenize(out)))
+            # if model == "GenSim":
+            #    	sentence_count = len(sent_tokenize(text))
+            #    	st.write("Number of sentences:", sentence_count)
+            #    	ratio = st.sidebar.slider("Select summary ratio", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
+            #     out = ts.text_sum_gensim(text, ratio=ratio)
+            #     st.write("**Summary Output:**", out)
+            #     st.write("Number of output sentences:", len(sent_tokenize(out)))
              			# st.write(out)
             if model == "TextRank":
                 sentence_count = len(sent_tokenize(text))
