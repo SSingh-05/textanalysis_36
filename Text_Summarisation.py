@@ -1,5 +1,4 @@
 # Import necessary libraries
-!pip install gensim==3.8.3
 import gensim
 from gensim.summarization.summarize import summarize
 from nltk.tokenize import sent_tokenize
